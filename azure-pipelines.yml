@@ -37,7 +37,7 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
-  - job: Build
+  - job: Deploy
     displayName: Deploy
     steps:
     - task: AzureRmWebAppDeployment@4
