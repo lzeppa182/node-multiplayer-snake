@@ -37,3 +37,14 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+  - job: Build
+    displayName: Deploy
+    steps:
+    - task: AzureRmWebAppDeployment@4
+      inputs:
+          ConnectionType: 'AzureRM'
+          azureSubscription: 'Pay-As-You-Go(6c9b2e18-3d75-4429-bdae-780387b56dfc)'
+          appType: 'webAppContainer'
+          WebAppName: 'zeppatest'
+          DockerNamespace: 'zeppareg.azurecr.io'
+          DockerRepository: 'snake'
