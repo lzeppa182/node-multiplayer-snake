@@ -27,3 +27,12 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
           $(tag)
+- stage: Deploy
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Pay-As-You-Go(1)(6c9b2e18-3d75-4429-bdae-780387b56dfc)'
+    appType: 'webAppContainer'
+    WebAppName: 'zeppatest'
+    DockerNamespace: 'hub.docker.com'
+    DockerRepository: 'zeppal182/zeppa'
