@@ -30,12 +30,11 @@ stages:
   - job: Deploy
     displayName: Deploying to webapp
     steps:
-      - 
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    appType: 'webAppContainer'
-    WebAppName: 'zeppatest'
-    DockerNamespace: 'hub.docker.com'
-    DockerRepository: 'lzeppa182/zeppa'
+    - task: AzureRmWebAppDeployment@4
+      inputs:
+        ConnectionType: 'AzureRM'
+        appType: 'webAppContainer'
+        WebAppName: 'zeppatest'
+        DockerNamespace: 'hub.docker.com'
+        DockerRepository: 'lzeppa182/zeppa'
 
