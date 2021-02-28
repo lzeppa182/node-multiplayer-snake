@@ -45,6 +45,6 @@ stages:
           ConnectionType: 'AzureRM'
           azureSubscription: 'Pay-As-You-Go(6c9b2e18-3d75-4429-bdae-780387b56dfc)'
           appType: 'webAppContainer'
-          WebAppName: 'zeppatest'
+          WebAppName: 'zeppa3'
           DockerNamespace: 'zeppareg.azurecr.io'
           DockerRepository: 'snake'
